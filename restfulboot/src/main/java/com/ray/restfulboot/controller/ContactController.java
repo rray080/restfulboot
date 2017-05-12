@@ -3,6 +3,7 @@
  */
 package com.ray.restfulboot.controller;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +20,6 @@ import com.ray.restfulboot.been.Contact;
 public class ContactController {
 	
 	public static final String BASE_URI = "restfulboot/v1/contacts";
-	
 	@RequestMapping(value="{contactNo}")
 	public Contact getContact(@PathVariable final int contactNo){
 		Contact contact = new Contact();
